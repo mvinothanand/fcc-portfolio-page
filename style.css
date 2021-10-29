@@ -1,7 +1,14 @@
 :root {
-  --color-1: black;
+  /* --color-1: black;
   --color-2: white;
   --color-3: hsl(44, 100%, 40%);
+  --shadow: hsl(44, 70%, 80%); */
+
+  --color-1: #343F56;
+  /* --color-3: #FF8882; */
+  --color-3: #E9896A;
+  --color-2: #F8F5F1;
+  --shadow: #387C6D;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -96,23 +103,17 @@ h1 {
 #projects {
   position: relative;
   margin: 0;
-  padding: 10rem;
+  padding: 5rem 10rem;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-areas:
     "header header header"
+    "content content content"
     "content content content";
   justify-content: center;
   gap: 3rem;
   background-color: var(--color-2);
-  border-top: 2px solid var(--color-3);
-}
-
-@media only screen and (max-width: 800px) {
-  #projects {
-    padding: 3rem;
-    grid-template-columns: 80%;
-  }
+  border-top: 5px solid var(--color-3);
 }
 
 #projects a {
@@ -132,6 +133,12 @@ h1 {
 #project-section-title {
   grid-area: header;
   align-self: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid var(--color-3);
+  /* padding-bottom: .25rem; */
+  padding: 0.25rem 0.4rem;
 }
 
 .project-title {
@@ -141,8 +148,129 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* grid-area: content; */
+}
+
+.project-title:hover {
+  box-shadow: 5px 10px 20px 10px var(--shadow);
+}
+
+.link-hover {
+  visibility: hidden;
+  color: var(--color-1);
+  font-size: larger;
+  font-weight: bold;
+}
+
+.project-title:hover .link-hover {
+  visibility: visible;
 }
 
 .screenshot {
   width: 100%;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 4rem;
+  border-top: 5px solid var(--color-3);
+  border-bottom: 5px solid var(--color-3);
+}
+
+#contact-section-title {
+  color: var(--color-2);
+  font-size: 3rem;
+  letter-spacing: 1.5pt;
+  padding: 0;
+  margin: 0;
+}
+
+#contact-section-sub-title {
+  color: var(--color-3);
+  font-size: 1.25rem;
+  letter-spacing: 1.5pt;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+#social {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-links {
+  color: var(--color-3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  font-size: 1.25rem;
+  /* align-items: center; */
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-links a:hover {
+  position: relative;
+  top: 0.5rem;
+}
+
+#footer {
+  color: var(--color-3);
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.25rem;
+}
+
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+  #projects {
+    padding: 3rem;
+    grid-template-columns: 40% 40%;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "content content";
+  }
+
+  #contact-section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #projects {
+    padding: 2rem;
+    grid-template-columns: 80%;
+    grid-template-areas:
+      "header"
+      "content"
+      "content";
+  }
+
+  #project-section-title {
+    grid-area: header;
+    align-self: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid var(--color-3);
+    /* padding-bottom: .25rem; */
+    padding: 0.25rem 0.4rem;
+  }
 }

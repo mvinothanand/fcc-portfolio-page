@@ -7,13 +7,14 @@
     <title>My Portfolio</title>
 
     <link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <nav id="navbar">
       <ul>
         <li class="nav-item"><a href="#welcome-section">About</a></li>
         <li class="nav-item"><a href="#projects">Projects</a></li>
-        <li class="nav-item"><a href="#projects">Contact</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <main id="main-content">
@@ -30,12 +31,12 @@
             alt="dummy image"
           />
           <a href="https://codepen.io/mvinothanand/pen/YzxqYQb" target="_blank"
-            >Tribute Page</a
+            ><span class="link-hover">&lt;&nbsp;</span>Tribute Page<span class="link-hover">&nbsp;&#47&gt;</span></a
           >
         </article>
         <article class="project-title">
           <a href="https://codepen.io/mvinothanand/pen/RwZoLXa" target="_blank"
-            >Survey Form</a
+            ><span class="link-hover">&lt;&nbsp;</span>Survey Form<span class="link-hover">&nbsp;&#47&gt;</span></a
           >
           <img
             class="screenshot"
@@ -50,12 +51,12 @@
             alt="dummy image"
           />
           <a href="https://codepen.io/mvinothanand/pen/OJjppmv" target="_blank"
-            >Product Landing Page</a
+            ><span class="link-hover">&lt;&nbsp;</span>Product Landing Page<span class="link-hover">&nbsp;&#47&gt;</span></a
           >
         </article>
         <article class="project-title">
           <a href="https://codepen.io/mvinothanand/pen/YzxQweG" target="_blank"
-            >Technical Documentation Page</a
+            ><span class="link-hover">&lt;&nbsp;</span>Documentation Page<span class="link-hover">&nbsp;&#47&gt;</span></a
           >
           <img
             class="screenshot"
@@ -65,8 +66,23 @@
         </article>
       </section>
       <section id="contact">
-        <a href="https://www.freecodecamp.org/mvinothanand">FreeCodeCamp</a>
+        <p id="contact-section-title">Let's work together...</p>
+        <p id="contact-section-sub-title">How do you take your coffee?</p>
+        <article id="social">
+          <div class="social-links">            
+            <p><a href="https://www.facebook.com/profile.php?id=100058747628068"><span class="social-icon"><i class="fab fa-facebook-square"></i></span>&nbsp;Facebook</a></p>
+          </div>
+
+          <div class="social-links">
+            <p><a href="https://www.freecodecamp.org/mvinothanand"><span><i class="fab fa-free-code-camp"></i></span>&nbsp;FreeCodeCamp</a></p>            
+          </div>         
+        </article>        
       </section>
+    <section id="footer">
+      <p>This is just a fake portfolio. All the projects and contact details given are not real.</p>
+      <p>Created for <a href="https://www.freecodecamp.org/mvinothanand">FreeCodeCamp&nbsp;<span><i class="fab fa-free-code-camp"></i></span></a></p>
+    </section>      
     </main>
+
   </body>
 </html>
